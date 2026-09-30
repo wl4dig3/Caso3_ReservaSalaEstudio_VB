@@ -1,0 +1,10 @@
+bin/
+obj/
+artifacts/
+.vs/
+.DS_Store
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+TestResults/
