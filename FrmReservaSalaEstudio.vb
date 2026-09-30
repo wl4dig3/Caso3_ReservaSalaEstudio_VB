@@ -18,8 +18,8 @@ Namespace PRO205.Semana7.Caso3.ReservaSalaEstudio.VB
 
         ' Evento de sistema Load: se ejecuta cuando el formulario termina de cargarse.
         Private Sub FrmReservaSalaEstudio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            ' Agrega las salas disponibles al ComboBox.
-            cboSala.Items.AddRange(New Object() {"Sala 1", "Sala 2", "Sala 3"})
+            ' Agrega las salas disponibles, incluida la Sala 4.
+            cboSala.Items.AddRange(New Object() {"Sala 1", "Sala 2", "Sala 3", "Sala 4"})
             ' Agrega los bloques horarios disponibles.
             cboBloque.Items.AddRange(New Object() {"09:00 - 10:00", "10:15 - 11:15", "11:30 - 12:30", "14:00 - 15:00", "15:15 - 16:15"})
             ' Impide seleccionar una fecha anterior a hoy.
@@ -64,6 +64,10 @@ Namespace PRO205.Semana7.Caso3.ReservaSalaEstudio.VB
                 Case "Sala 3"
                     ' Devuelve la capacidad de Sala 3.
                     Return 8
+                ' La Sala 4 admite hasta diez personas.
+                Case "Sala 4"
+                    ' Devuelve la capacidad de Sala 4.
+                    Return 10
                     ' Cualquier otro valor significa que no existe una selección válida.
                 Case Else
                     ' Cero identifica el estado sin sala.
